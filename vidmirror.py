@@ -8,10 +8,10 @@ from instagram.client import InstagramAPI
 USER_ID_URL = 'http://jelled.com/ajax/instagram?do=username&username={}&format=json'
 api = InstagramAPI(access_token=access_token, client_secret=client_secret)
 
-class TopIGVids():
+class VidMirror():
     def get_user_id(self, username):
         try:
-           r = requests.get(USER_ID_URL.format(usernam))
+           r = requests.get(USER_ID_URL.format(username))
            output = r.json()
         except:
             pass
@@ -21,9 +21,7 @@ class TopIGVids():
 
 
 if __name__ == '__main__':
-    tvids = TopIGVids()
+    tvids = VidMirror()
     followed_users = tvids.get_followed_users(MY_USER_ID)
     for followed_user in followed_users:
-        p
-
-
+        print followed_user
