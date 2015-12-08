@@ -19,6 +19,8 @@ class VidMirror():
     def get_followed_users(self, user_id):
         return api.user_follows(user_id)
 
+    def get():
+        pass
 
 if __name__ == '__main__':
     tvids = VidMirror()
