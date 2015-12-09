@@ -22,6 +22,8 @@ class VidMirror():
     def get():
         pass
 
+    def put():
+        pass:
 if __name__ == '__main__':
     tvids = VidMirror()
     followed_users = tvids.get_followed_users(MY_USER_ID)
